@@ -1,5 +1,10 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import Callback from "./Callback"
+import Profile from "./Profile"
+import Login from "./Login"
+import Artists from "./Artists"
+import Auth from "../Adapters/Auth"
+import {Route, withRouter} from "react-router-dom"
 import './App.css';
 
 class App extends Component {
@@ -30,7 +35,7 @@ class App extends Component {
       <h1> Meu Spotify </h1>
       </br>
         <Login currentUser= {this.state.currentUser}/>
-        <Route exact path="/callback" component={} />
+        <Route exact path="/callback" component={this.handleCallback} />
         <Route exact path="/profile" component={this.renderProfile}/>
       </div>
     );
